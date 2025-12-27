@@ -1,0 +1,9 @@
+node_modules/
+dist/
+dist-electron/
+.DS_Store
+*.log
+vendor/rsync/
+!vendor/rsync/.keep
+release/
+

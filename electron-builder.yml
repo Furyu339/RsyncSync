@@ -1,0 +1,31 @@
+appId: com.furyu.rsyncsync
+productName: RsyncSync
+directories:
+  output: release
+afterPack: scripts/afterPack.cjs
+files:
+  - dist/renderer/**/*
+  - dist-electron/**/*
+  - package.json
+extraResources:
+  - from: vendor
+    to: vendor
+  - from: locales/zh-Hans.lproj
+    to: zh-Hans.lproj
+mac:
+  target:
+    - target: dmg
+      arch:
+        - arm64
+    - target: dir
+      arch:
+        - arm64
+  category: public.app-category.utilities
+  hardenedRuntime: false
+  entitlements: null
+  entitlementsInherit: null
+  extendInfo:
+    CFBundleDevelopmentRegion: zh_CN
+    CFBundleLocalizations:
+      - zh-Hans
+      - en
